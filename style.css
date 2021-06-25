@@ -3,21 +3,60 @@
     padding: 0;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(236, 84, 84), rgb(81, 78, 241));
+}
+
 .main {
-    display: flex;
-    background-color: rgb(234, 0, 255);
-    box-shadow: brown;
-    width: 600px;
-    height: 600px;
-    border: 10px solid rgb(39, 6, 224);
-    margin: 20px auto;
+    display: grid;
+    justify-content: center;
+    margin-top: 25%;
+    min-height: 10vh;
+    max-width: auto;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
 }
 
 .input {
-    width: 400px;
-    height: 50px;
-    border: 5px solid rgb(0, 255, 42);
-    padding-left: 10vh;
-    margin-top: 5px;
-    margin-left: 30px;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: rgba(9, 10, 4, 0.616);
+    font-size: 2rem;
+    color: honeydew;
+    border: 4px solid rgb(2, 2, 2);
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 4px solid rgb(8, 8, 8);
+    margin: 1px;
+}
+
+.main>button :hover {
+    background-color: rgb(26, 2, 236);
+}
+
+#c {
+    grid-column: span 2;
+}
+
+.opt {
+    background-color: rgba(255, 0, 0, 0.507);
+}
+
+.clear {
+    background-color: rgb(26, 2, 236);
+}
+
+.back {
+    background-color: green;
+}
+
+.eql {
+    background-color: grey;
 }
